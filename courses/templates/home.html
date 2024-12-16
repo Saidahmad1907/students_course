@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}Home - Django Courses{% endblock %}
+{% block content %}
+<h2>Available Courses</h2>
+<img src="{% static 'images/course_banner.png' %}" alt="Course Banner">
+<ul>
+    <li><a href="#">Python Programming</a></li>
+    <li><a href="#">Web Development</a></li>
+    <li><a href="#">Data Science</a></li>
+</ul>
+{% endblock %}

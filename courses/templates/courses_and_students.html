@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Courses and Students{% endblock %}
+{% block content %}
+<h1>Courses and Students</h1>
+<h2>Courses</h2>
+<ul>
+    {% for course in courses %}
+    <li><a href="{% url 'course_students' course.id %}">{{ course.title }}</a></li>
+    {% endfor %}
+</ul>
+<h2>Students</h2>
+<ul>
+    {% for student in students %}
+    <li><a href="{% url 'student_detail' student.id %}">{{ student.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
